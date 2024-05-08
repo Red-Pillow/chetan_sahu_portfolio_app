@@ -5,13 +5,15 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import groupchatapp from '../../public/images/projects/groupchat_create_join_page.png'
 import freelancr from '../../public/images/projects/freelancr.png';
 import nodejs from '../../public/images/Icons/node.png';
-import techNews from '../../public/images/projects/tech-news.png';
-import wedding from '../../public/images/projects/wedding.png';
+import blogapp from '../../public/images/projects/BlogApp.gif';
+import expensetracker from '../../public/images/projects/ExpenseTracker.gif';
 import mongodb from '../../public/images/Icons/mongodb.png';
 import react from '../../public/images/Icons/react.png';
-import graphql from '../../public/images/Icons/graphql.png';
+import rest from '../../public/images/Icons/rest_api.png';
+import socket from '../../public/images/svgs/socket.webp';
 import java from '../../public/images/Icons/java.png';
 import spring from '../../public/images/Icons/spring.png';
 import mysql from '../../public/images/Icons/mysql.png';
@@ -165,12 +167,14 @@ const projects = () => {
     { src: js, name: 'Javascript' },
     { src: nodejs, name: 'Nodejs' },
     { src: mysql, name: 'MySQL' },
-    { src: graphql, name: 'Bootsrap' },
+    { src: rest, name: 'RESTAPI' },
   ];
   const project2 = [
-    { src: java, name: 'Java' },
-    { src: spring, name: 'Spring Boot' },
+    { src: js, name: 'Javascript' },
+    { src: nodejs, name: 'Nodejs' },
     { src: mysql, name: 'MySQL' },
+    { src: rest, name: 'RESTAPI' },
+    { src: socket, name: 'Socket.io'},
   ];
   const project3 = [
     { src: js, name: 'JavaScript' },
@@ -194,9 +198,9 @@ const projects = () => {
             <div className='col-span-12'>
               <FeaturedProject
                 title='Expense Tacker App'
-                img={freelancr}
-                summary='A MERN stack single-page application that works with a focus on data and user demand. This project is performed with JavaScript, MongoDB databases, React, GraphQL APIs, and JSON web token(JWT) authentication. '
-                link='#'
+                img={expensetracker}
+                summary='A fullstack expense tracking app built with Node.js Express.js supporting JWT authenticated users to create,edit and track expenses of different categorical expenses. App supports users to access premium subscription feature to download monthly and yearly expense report integrating Razorpay payment gateway API, realtime leader board feature ranks users based on expenses'
+                link='http://myexpensetrakr.publicvm.com/'
                 github='https://github.com/Red-Pillow/Expense-Tracker-App'
                 type='Personal Project'
                 props={project1}
@@ -205,22 +209,22 @@ const projects = () => {
             <div className='col-span-6 sm:col-span-12'>
               <Project
                 title='RealTime GroupChat App'
-                img={techNews}
-                summary='A social news site, Just Tech News, builded with Java Spring Boot framework for RestfulAPIs. Building a Spring Boot API with creating CRUD operations with Spring Data JPA and MySQL database'
-                link='https://javatechnews-api.herokuapp.com/'
-                github='https://github.com/infinissible/tech-news-java-api'
+                img={groupchatapp}
+                summary='A realtime groupchat app, built with Node.js, Express.js for RestfulAPIs. Socket.io for seamless group chat and one-to-one private chat with JWT-based user authentication for enhanced security. The app App supports multimedia sharing of images as well as videos in real time.'
+                link='http://groupchatapp.publicvm.com/'
+                github='https://github.com/Red-Pillow/GroupChatApp'
                 type='Personal Project'
                 props={project2}
               />
             </div>
             <div className='col-span-6 sm:col-span-12'>
               <Project
-                title='My-wedding-invitation'
-                img={wedding}
-                summary='A personal wedding invitation as a single-page application built with Reac.js. It is designed for the mobile-friendly interface including a photo gallery with react-responsive-carousel, an API of NAVER MAP'
-                link='https://infinissible.github.io/my-wedding-invitation/'
-                github='https://github.com/infinissible/my-wedding-invitation'
-                type='Mobile-friendly wedding invitation'
+                title='BlogApp'
+                img={blogapp}
+                summary='A a fully functional Blog App using Node.js,Express.js and Sequelize ORM over MySQL that implements RESTful routes and CRUD functionalities to allow the users to view a list of blogs, create new blogs and comment on the blogs.'
+                link='https://github.com/Red-Pillow/BlogApp'
+                github='https://github.com/Red-Pillow/BlogApp'
+                type='Blogging App'
                 props={project3}
               />
             </div>
